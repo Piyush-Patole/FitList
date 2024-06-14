@@ -6,7 +6,7 @@ Features =>
 
 1. Listing: Users can list all the exercises and create a routine.
 2. Viewing: The home page displays all exercises along with sets, reps and notes(if any).
-3. Edit/ Update: Users can edit and update existing exercises.
+3. Edit / Update: Users can edit and update existing exercises.
 4. Deletion: Completed and marked exercises will be deleted from the list automatically..
 
 Technical Requirements =>
