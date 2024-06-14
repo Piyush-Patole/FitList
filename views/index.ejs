@@ -1,0 +1,53 @@
+<%- include('partials/header'); -%>
+
+<div class="box" id="heading">
+  <h1>
+    <%= listTitle %>
+  </h1>
+</div>
+<div class="box">
+  <% for (let item of listItems) { %>
+    <div class="item">
+      <form action="/delete" method="post">
+        <input type="checkbox" onchange="this.form.submit()" name="deleteItemId" value="<%= item.id %>">
+      </form>
+
+      <p id="title<%=item.id%>">
+        <%= item.exercise_name %> - Sets: <%= item.sets %>, Reps: <%= item.reps %> (Notes: <%= item.notes %>)
+      </p>
+
+      <form class="edit" action="/edit" method="post" id="editForm<%=item.id%>">
+        <input type="hidden" name="updatedItemId" value="<%= item.id %>">
+        <input type="text" name="updatedExerciseName" value="<%= item.exercise_name %>" hidden>
+        <input type="number" name="updatedSets" value="<%= item.sets %>" hidden>
+        <input type="number" name="updatedReps" value="<%= item.reps %>" hidden>
+        <input type="text" name="updatedNotes" value="<%= item.notes %>" hidden>
+        <button id="done<%=item.id%>" class="edit" type="submit" hidden><img class="icon" src="/assets/icons/check-solid.svg" alt="tick image"></button>
+      </form>
+      <button id="edit<%=item.id%>" class="edit" onclick="editHandler('<%=item.id%>')"><img class="icon" src="/assets/icons/pencil-solid.svg" alt="pencil image"></button>
+    </div>
+  <% } %>
+
+  <form class="item" action="/add" method="post">
+    <input type="text" name="exercise_name" placeholder="Exercise Name" autocomplete="off" autofocus="true" />
+    <input type="number" name="sets" placeholder="Sets" autocomplete="off" />
+    <input type="number" name="reps" placeholder="Reps" autocomplete="off" />
+    <input type="text" name="notes" placeholder="Notes" autocomplete="off" />
+    <button class="add" type="submit">+</button>
+  </form>
+</div>
+
+<script>
+  function editHandler(id) {
+    const form = document.getElementById("editForm" + id);
+    const inputs = form.getElementsByTagName("input");
+
+    for (let input of inputs) {
+      input.removeAttribute("hidden");
+    }
+
+    document.getElementById("edit" + id).setAttribute("hidden", true);
+    document.getElementById("done" + id).removeAttribute("hidden");
+  }
+</script>
+<%- include('partials/footer'); -%>
