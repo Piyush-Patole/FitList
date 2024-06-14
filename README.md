@@ -11,10 +11,10 @@ Features =>
 
 Technical Requirements =>
 
-Node.js & Express.js: Used Node.js as the runtime environment and Express.js to handle routing and middleware.
-EJS: Used EJS as the templating engine to generate dynamic HTML.
-Middleware: Used body-parser to parse form data & express.static to serve static files.
-PostGre SQL: Used for database management, storing the data and its manipulation.
+1. Node.js & Express.js: Used Node.js as the runtime environment and Express.js to handle routing and middleware.
+2. EJS: Used EJS as the templating engine to generate dynamic HTML.
+3. Middleware: Used body-parser to parse form data & express.static to serve static files.
+4. PostGre SQL: Used for database management, storing the data and its manipulation.
 
 Screenshots =>
 
