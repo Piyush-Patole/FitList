@@ -20,11 +20,15 @@ Screenshots =>
 
 ![home](https://github.com/Piyush-Patole/FitList/assets/73785010/d692fc16-37d5-4c49-bbf3-6e8efee53293)
 Home
-![edit](https://github.com/Piyush-Patole/FitList/assets/73785010/51fd550d-b60a-4fb6-988c-a3816783916d)
-Edit
+
 ![view](https://github.com/Piyush-Patole/FitList/assets/73785010/62eb2bca-944d-4d0e-9dbb-703f66adfddf)
 View
+
+![edit](https://github.com/Piyush-Patole/FitList/assets/73785010/51fd550d-b60a-4fb6-988c-a3816783916d)
+Edit
+
 ![update](https://github.com/Piyush-Patole/FitList/assets/73785010/add4d422-d3b5-4ed9-b013-fcd3c79fc33e)
 Update
+
 ![database](https://github.com/Piyush-Patole/FitList/assets/73785010/9a7918f1-ff06-40d8-83c2-f73690f9ebf2)
 Database
